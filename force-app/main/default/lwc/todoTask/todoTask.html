@@ -17,11 +17,10 @@
         </lightning-button-icon>
         <lightning-layout>
             <lightning-layout-item size="12" padding="around-small">
-                <!-- Show Spinner only when the processing variable is true -->
                 <template if:true={processing}>
                     <lightning-spinner alternative-text="Loading" size="small"></lightning-spinner>
                 </template>
-                <!-- Iterating the ToDo Tasks and displaying them in a list -->
+             
                 <ul class="slds-has-dividers_around-space">
                     <template for:each={todoTasks} for:item="todoTask">
                         <li class="slds-item" key={todoTask.id}>
@@ -47,7 +46,6 @@
         </lightning-layout>
         <p slot="footer">
             <lightning-layout pull-to-boundary="small">
-                <!-- Input text field to enter the Label of new Task -->
                 <lightning-layout-item padding="horizontal-small" flexibility="grow">
                     <lightning-input
                         type="text"
